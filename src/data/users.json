@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "username": "carlos",
+    "password": "1234",
+    "email": "XtTqB@example.com"
+  },
+  {
+    "id": 2,
+    "username": "pedro",
+    "password": "4321",
+    "email": "qk9pS@example.com"
+  },
+  {
+    "id": 3,
+    "username": "maria",
+    "password": "1111",
+    "email": "nLp6v@example.com"
+  },
+  {
+    "id": 4,
+    "username": "leoc",
+    "password": "22222",
+    "email": "dfghfg@fgf.com"
+  },
+  {
+    "id": "96b748a838",
+    "username": "leocfv",
+    "email": "dfghfg@fgf.com",
+    "password": "12312341234"
+  },
+  {
+    "id": "7584cb28bb",
+    "username": "assd44",
+    "email": "dfghfg@fgf.com",
+    "password": "$2a$10$kDEbQbl9QcEJa77pjHNRYe9ef.sTKtdtnry.Ey4cBVi.g8cICwvsK"
+  },
+  {
+    "id": "d52285f4c5",
+    "username": "leocfv",
+    "email": "sdfgsdf@gmcial.com",
+    "password": "$2a$10$zJL93Hy/1l36qx7qFXmb.O6L/uEMRCFoq4Yuqki1nLGmSzc9ky9te"
+  },
+  {
+    "id": "de4206d6dd",
+    "username": "ana sol ",
+    "email": "solciot@gmail.com",
+    "password": "$2a$10$h4uEzSJKtyZzEs/eIRpVvuQAtI.9RKrDXy.tqic5Jm5kRWW59lOsC"
+  },
+  {
+    "id": "ff30b1c872",
+    "username": "leocsd",
+    "email": "hthgh@gg.coms",
+    "password": "$2a$10$UAK8GnXZNOuDjWG9FWQ34uYnn7R4lzO3DXgf14OoLRQTlMq6vxvry"
+  },
+  {
+    "id": "597f4865d4",
+    "username": "leocfve",
+    "email": "leandro@gmail.com",
+    "password": "$2a$10$99lMSY.l77rM2QXX3qbZ8OrstOM0hoyaMF8PHWEuALYT0HpEsL4yC"
+  }
+]

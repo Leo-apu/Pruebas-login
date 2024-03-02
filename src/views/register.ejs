@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <div style="display: flex; justify-content: center; align-items: center ; background-color: aquamarine; max-width: 60%; margin: 0 auto;padding: 1.5em;">
+        <form action="/users/registro" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+            <caption>REGISTRO</caption>
+            <label for="username" >
+                <input type="text" name="username" placeholder="username" value="<%= locals.old && old.username %>">
+            </label>
+            <% if (locals.errors && errors.username) { %>
+                <p style="color: crimson; font-size: smaller; margin: 0;">
+                    <%= errors.username.msg %>
+                </p>
+            <% } %>
+            <label for="email">
+                <input type="email" name="email" placeholder="email" value="<%= locals.old && old.email %>">                
+            </label>
+            <% if (locals.errors && errors.email) { %>
+                <p style="color: crimson; font-size: smaller; margin: 0;">
+                    <%= errors.email.msg %>
+                </p>
+            <% } %>
+            <label for="password">
+                <input type="password" name="password" placeholder="password" value="<%= locals.old && old.password %>">            
+            </label>
+            <% if (locals.errors && errors.password) { %>
+                <p style="color: crimson; font-size: smaller; margin: 0;">
+                    <%= errors.password.msg %>
+                </p>
+            <% } %>
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+</body>
+</html>
