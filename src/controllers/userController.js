@@ -66,7 +66,6 @@ module.exports = {
 
         const emailReq = req.body.email;
         const userLog = user.findByField('email', emailReq);
-
         if (!userLog) {
             return res.render('login', {
                 errors: {
@@ -105,7 +104,7 @@ module.exports = {
     },
 
     profile : (req, res) => {
-        console.log('entrando al perfil',req.cookies.userEmail);
+        console.log('Entrando al perfil : ',req.cookies.userEmail);
         res.render('profile', { user: req.session.userLog });
     }
 

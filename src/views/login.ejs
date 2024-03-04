@@ -5,33 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    <%- include('partials/head', {title: 'Login'}) %>
 <body>
     <%- include('partials/navbar.ejs') %>
-    <div style="display: flex; justify-content: center; align-items: center ; background-color: aquamarine; max-width: 60%; margin: 0 auto;padding: 1.5em;">
-        <form action="/users/login" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
-            <caption>INICIO DE SESION</caption>
-            <label for="email">
-                <input type="email" name="email" placeholder="email" value="<%= locals.old && old.email %>">                
-            </label>
-            <% if (locals.errors && errors.email) { %>
-                <p style="color: crimson; font-size: smaller; margin: 0;">
-                    <%= errors.email.msg %>
-                </p>
-            <% } %>
-            <label for="password">
-                <input type="password" name="password" placeholder="password" value="<%= locals.old && old.password %>">            
-            </label>
-            <% if (locals.errors && errors.password) { %>
-                <p style="color: crimson; font-size: smaller; margin: 0;">
-                    <%= errors.password.msg %>
-                </p>
-            <% } %>
 
-            <label style="display: flex; align-items: center;">
-                <input type="checkbox" name="remember"> Recordarme
-            </label>
-            <input type="submit" value="iNICIAR SESION">
-        </form>
+    <div class="container mt-5 w-50"> 
+        <div class="p-5 mb-4 bg-body-secondary rounded-4">
+            <form action="/users/login" method="POST">
+                <div class="text-center ">
+                    <h1><i class="bi bi-person-circle display-2 "></i> </h1>
+                </div>
+                <legend class="text-center fs-2 fw-bolder">
+                    INICIO DE SESIÓN
+                </legend>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fw-bold fs-4 fst-italic">
+                        Email
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-primary text-white fs-5 "><i class="bi bi-envelope-fill"></i></span>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            name="email" placeholder="email" value="<%= locals.old && old.email %>">
+                    </div>
+                    <% if (locals.errors && errors.email) { %>
+                    <p style="color: crimson; font-size: smaller; margin: 0;">
+                        <%= errors.email.msg %>
+                    </p>
+                    <% } %>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label fw-bold fs-4 fst-italic">
+                        Password
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text  bg-primary text-white fs-5  "><i class="bi bi-lock-fill"></i></span>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                            placeholder="password" value="<%= locals.old && old.password %>">
+                    </div>
+                    <% if (locals.errors && errors.password) { %>
+                    <p style="color: crimson; font-size: smaller; margin: 0;">
+                        <%= errors.password.msg %>
+                    </p>
+                    <% } %>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label fw-semibold fs-5" for="exampleCheck1" name="remember">Recuérdame</label>
+                </div>
+                <div class="d-grid col-6 mx-auto">
+                    <button type="submit" class="btn btn-primary">INICIAR SESIÓN</button>
+                </div>
+            </form>
+        </div>
     </div>
+
 </body>
 </html>

@@ -5,37 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<%- include('partials/head', {title: 'Registro'}) %>
 <body>
     <%- include('partials/navbar.ejs') %>
-    <div style="display: flex; justify-content: center; align-items: center ; background-color: aquamarine; max-width: 60%; margin: 0 auto;padding: 1.5em;">
-        <form action="/users/registro" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
-            <caption>REGISTRO</caption>
-            <label for="username" >
-                <input type="text" name="username" placeholder="username" value="<%= locals.old && old.username %>">
-            </label>
-            <% if (locals.errors && errors.username) { %>
-                <p style="color: crimson; font-size: smaller; margin: 0;">
-                    <%= errors.username.msg %>
-                </p>
-            <% } %>
-            <label for="email">
-                <input type="email" name="email" placeholder="email" value="<%= locals.old && old.email %>">                
-            </label>
-            <% if (locals.errors && errors.email) { %>
-                <p style="color: crimson; font-size: smaller; margin: 0;">
-                    <%= errors.email.msg %>
-                </p>
-            <% } %>
-            <label for="password">
-                <input type="password" name="password" placeholder="password" value="<%= locals.old && old.password %>">            
-            </label>
-            <% if (locals.errors && errors.password) { %>
-                <p style="color: crimson; font-size: smaller; margin: 0;">
-                    <%= errors.password.msg %>
-                </p>
-            <% } %>
-            <input type="submit" value="Registrar">
-        </form>
+    <div class="container mt-5 w-50  ">
+        <div class="p-5 mb-4 bg-body-secondary  rounded-3">
+            <form action="/users/registro" method="POST">
+                <legend class="text-center fs-1 fw-bold  ">REGISTRO</legend>
+                <div class="mb-3">
+                    <label for="exampleInputUsername" class="form-label fw-bold fs-4 fst-italic ">Username</label>
+                    <input type="text" class="form-control" id="exambpleInputUsername" aria-describedby="userNameHelp"
+                            name="username" placeholder="username" value="<%= locals.old && old.username %>">
+                            <% if (locals.errors && errors.username) { %>
+                                <p style="color: crimson; font-size: smaller; margin: 0;">
+                                    <%= errors.username.msg %>
+                                </p>
+                            <% } %>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fw-bold fs-4 fst-italic">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            name="email" placeholder="email" value="<%= locals.old && old.email %>">
+                            <% if (locals.errors && errors.email) { %>
+                                <p style="color: crimson; font-size: smaller; margin: 0;">
+                                    <%= errors.email.msg %>
+                                </p>
+                            <% } %>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label fw-bold fs-4 fst-italic">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1"
+                            name="password" placeholder="password" value="<%= locals.old && old.password %>">
+                            <% if (locals.errors && errors.password) { %>
+                                <p style="color: crimson; font-size: smaller; margin: 0;">
+                                    <%= errors.password.msg %>
+                                </p>
+                            <% } %>
+                </div>
+                <div class="d-grid col-6 mx-auto">
+                    <button type="submit" class="btn btn-primary">REGISTRAR</button>
+                </div>
+            </form>
+        </div>
     </div>
+
+    <%- include('partials/footer.ejs')  %>
 </body>
 </html>

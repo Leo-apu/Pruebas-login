@@ -1,49 +1,36 @@
-/* Estilos para el navbar */
+/*====== Fonts ======*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+
+/*====== Variables ======*/
+:root {
+  --yellow: #EAC926;
+  --dark-blue: #03264C;
+  --light-blue: #1259c3;
+  --gray: #666666;
+  --light-gray: #ebebeb;
+  --green: #39b54a;
+  --base-font-family: 'Roboto', sans-serif
+}
+
+
+/*====== Basics ======*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #1b1a18;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 16px;
+}
+
 .navbar {
-    background-color: #ffffff; /* Color de fondo */
-    border-bottom: 1px solid #e3e3e3; /* Borde inferior */
-}
-
-.navbar-brand {
-    color: #000000; /* Color del texto */
-    font-weight: bold; /* Grosor de la fuente */
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.navbar-nav .nav-link {
-    color: #000000; /* Color del texto */
-}
-
-.navbar-nav .nav-link:hover {
-    color: #007bff; /* Color del texto al pasar el mouse */
-}
-
-.navbar-nav .nav-link.active {
-    font-weight: bold; /* Grosor de la fuente en el enlace activo */
-}
-
-/* Estilos para el dropdown de usuario */
-.dropdown-menu {
-    background-color: #ffffff; /* Color de fondo */
-}
-
-.dropdown-menu .dropdown-item {
-    color: #000000; /* Color del texto */
-}
-
-.dropdown-menu .dropdown-item:hover {
-    background-color: #f8f9fa; /* Color de fondo al pasar el mouse */
-    color: #000000; /* Color del texto al pasar el mouse */
-}
-
-.dropdown-divider {
-    border-top: 1px solid #e3e3e3; /* Línea divisoria */
-}
-
-/* Estilos para la imagen de usuario en el dropdown */
-.dropdown-menu img {
-    border-radius: 50%; /* Forma del borde de la imagen (redonda) */
+  font-family: var(--base-font-family);
+  background-color: var(--light-gray);
+  padding: 15px;
+  border-radius: 20px;
+  margin: 16px;
 }

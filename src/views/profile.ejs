@@ -5,17 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<%- include('partials/head', {title: 'Perfil'}) %>
 <body>
-    <%- include('partials/navbar.ejs') %>
-    <h1 style="display: flex; justify-content: center; align-items: center ; background-color: aquamarine; max-width: 60%; margin: 0 auto;padding: 1.5em;">
-        PERFIL
-    </h1>
-    <h2 style="display: flex; justify-content: center; align-items: center ; background-color: aquamarine; max-width: 60%; margin: 0 auto;padding: 1.5em;">
-        USERNAME : <%= user.username %>
-    </h2>
-    <h2 style="display: flex; justify-content: center; align-items: center ; background-color: aquamarine; max-width: 60%; margin: 0 auto;padding: 1.5em;">
-        EMAIL : <%= user.email %>
-    </h2>
+    <%- include('partials/navbar.ejs') %>    
+    <div class="container mt-3 w-75 rounded">
+        <div class="card text-center m-3">
+            <h3 class="card-title fw-bold mt-3 ">PERFIL DE USUARIO</h3>
+            <div class="row g-2 p-3 align-items-center ">
     
+                <div class="card-body col-md-3">
+                    <img class="img-fluid rounded-circle" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Imagen de perfil">
+                </div>
+                <div class="card-body col-md-9 text-start">
+                    <p class="card-text fw-bold">USUARIO:</p>
+                    <p class="card-text p-2 "><%= user.username %></p>
+                    <p class="card-text fw-bold">EMAIL:</p>
+                    <p class="card-text p-2 "><%= user.email %></p>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="w-50 col-6 mx-auto g-5">
+                    <a href="/users/logout" class="btn btn-primary">CERRAR SESIÓN</a>
+                    <a href="#" class="btn btn-primary">INFORMACIÓN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/footer.ejs')  %>
 </body>
 </html>
